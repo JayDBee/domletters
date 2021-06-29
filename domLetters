@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+#CS461 HW 1
+#
+#Program counts the total of dominant letters in a sentence
+
+import sys
+
+#The below code was inspired from the sources that follow:
+#https://www.geeksforgeeks.org/python-element-with-largest-frequency-in-list/
+def domletter(string):
+    return max(set(string), key = string.count)
+
+#The below code was inspired from the sources that follow:
+#https://www.geeksforgeeks.org/python-frequency-of-each-character-in-string/#:~:text=get()%20method%20is%20used,of%20that%20element%20in%20dictionary.
+def dom_num(string, lower, upper):
+    test = list(string)
+    return test.count(lower) + test.count(upper)
+
+sum = 0
+contents = sys.stdin.read()
+words = contents.split()
+for clear_word in words:
+    if clear_word.isalpha():
+        sum += dom_num(clear_word, domletter(clear_word).lower(), domletter(clear_word).upper())
+
+print(sum)
