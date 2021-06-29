@@ -58,6 +58,8 @@ text of
 from which the file `swift.txt` in this distribution was
 taken.
 
+Thanks to the pulp fiction team for inspiration on the testing text `fiction.txt`.
+
 ## License
 
 This work is made available under the "MIT License". Please
